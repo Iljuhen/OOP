@@ -11,14 +11,16 @@ public  abstract class Animal {
 
     private String name;
     private int box;
+    private String color;
 
-    public Animal(String name, int box) {
+    public Animal(String name, int box, String color) {
         this.name = name;
         this.box = box;
+        this.color = color;
     }
     @Override
     public String toString() {
-        return String.format("Name is %s box num : %d", this.name, this.box);
+        return String.format("Name is %s box num : %d color is %s" , this.name, this.box,this.color);
     }
     public abstract String say();
     

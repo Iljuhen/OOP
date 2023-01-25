@@ -3,8 +3,8 @@ package sems.sem2;
 /* Класс Dog наследуется от Animal */
 public class Dog extends Animal {
   
-    public Dog(String name, int box) {
-        super(name, box);
+    public Dog(String name, int box, String color) {
+        super(name, box, color);
     }
 
     @Override
