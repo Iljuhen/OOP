@@ -14,5 +14,9 @@ public class Cat extends Animal {
     public String say() {
         return "Мяу";
     }
+    @Override
+    public String toString() {
+        return "Cat "+ super.toString();
+    }
 
 }
