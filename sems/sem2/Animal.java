@@ -7,7 +7,7 @@ package sems.sem2;
 // 2. Создать класс Zoo, и организовать перекличку животных. 
 // Теперь создать объект радио, и подумать, как его включить в объект Zoo.
 
-public  abstract class Animal {
+public  abstract class Animal implements Speakabll{
 
     private String name;
     private int box;

@@ -3,8 +3,8 @@
 
 package sems.sem2;
 
-public class Radio {
-    public String radioSay(){
+public class Radio implements Speakabll{
+    public String say(){
         return "Good morning"; 
     }
 }
