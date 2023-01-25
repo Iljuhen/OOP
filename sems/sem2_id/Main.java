@@ -1,4 +1,4 @@
-package sems.sem2;
+package sems.sem2_id;
 
 public class Main {
     public static void main(String[] args) {

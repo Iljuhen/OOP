@@ -1,4 +1,4 @@
-package sems.sem2;
+package sems.sem2_id;
 
 public class InvestStatic {
 //* Создаем класс */
