@@ -1,4 +1,8 @@
-package sems.sem2;
+//Создать интерфейс, скорость плаванья
+//Добавить новое животное, способное плавать
+//Все вышеуказанное создать согласно принципам ООП пройдённым на семинаре
+
+package DZs.dz2;
 
 public class Turtle extends Animal implements Runable, Swimable{
 

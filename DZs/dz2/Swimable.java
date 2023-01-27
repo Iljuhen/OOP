@@ -1,4 +1,4 @@
-package sems.sem2;
+package DZs.dz2;
 
 public interface Swimable {
     public int speedOfSwim();

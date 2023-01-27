@@ -1,6 +1,7 @@
-package sems.sem2;
+package DZs.dz2;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 public class Zoo {
@@ -37,7 +38,6 @@ public class Zoo {
         }
         return result;
     }
-
     public List<Flyable> getFlyers() {
         List<Flyable> result = new ArrayList<Flyable>();
         for (Animal an : animals) {
@@ -48,20 +48,39 @@ public class Zoo {
         }
         return result;
     }
-
-    public int getChampionOfRunners() {
-        int max_speed = 0;
-        for (Runable runner : getRunner()) {
-            if (max_speed < runner.speedOfRun()) {
-                max_speed = runner.speedOfRun();
-
+    public List<Swimable> getSwimers() {
+        List<Swimable> result = new ArrayList<Swimable>();
+        for (Animal an : animals) {
+            if (an instanceof Swimable) {
+                result.add((Swimable)an);
             }
-        }
-        return max_speed;
 
+        }
+        return result;
     }
 
 
+public int getChampionOfRunners(){
+    int max_speed = 0;
+    for (Runable runner : getRunner()) {
+        if (max_speed < runner.speedOfRun()){
+           max_speed = runner.speedOfRun();
+
+        }
+    }
+    return max_speed;
+
+}
+public int getChampionOfSwimers(){
+    int max_speed_swim = 0;
+    for (Swimable swimer : getSwimers()) {
+        if (max_speed_swim < swimer.speedOfSwim()){
+           max_speed_swim = swimer.speedOfSwim();
+
+        }
+    }
+    return max_speed_swim;
+}
 
     public ArrayList<Animal> getAnimals() {
         return animals;

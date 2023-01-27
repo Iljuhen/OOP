@@ -1,12 +1,12 @@
-package sems.sem2;
+package DZs.dz2;
 
 public class main {
     public static void main(String[] args) {
         Zoo zoo1 = new Zoo();
         zoo1.addAnimal(new Cat("Vasya", 1, "gray"))
                 .addAnimal(new Dog("Ignat", 10, "black"))
-                .addAnimal(new Duck("Donuld", 3, "White"));
-                
+                .addAnimal(new Duck("Donuld", 3, "White"))
+                .addAnimal(new Turtle("Тартилла", 7, "green"));
         for (Animal an : zoo1.getAnimals()) {
             System.out.println(an);
             System.out.println(an.say());
@@ -28,6 +28,12 @@ public class main {
         for (Flyable flyer : zoo1.getFlyers()) {
             System.out.println("Flyers speed is " + flyer.speedOfFly());
         }
-       
+        for (Swimable swimer : zoo1.getSwimers()) {
+            System.out.println("Swimers speed is " + swimer.speedOfSwim());
+        }
+        int max_speed_swim = zoo1.getChampionOfSwimers();
+        System.out.println(String.format("Max of speed of swim in the zoo, is %d", max_speed_swim));
+
     }
+
 }
