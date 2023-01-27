@@ -1,6 +1,6 @@
 package sems.sem2;
 
-public class Duck extends Animal implements Runable, Flyable{
+public class Duck extends Animal implements Runable, Flyable, Swimable{
 
     public Duck(String name, int box, String color) {
         super(name, box, color);
@@ -22,5 +22,11 @@ public class Duck extends Animal implements Runable, Flyable{
         
         return 10;
     }
+    @Override
+    public int speedOfSwim() {
+        
+        return 15;
+    }
+    
     
 }

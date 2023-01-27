@@ -48,6 +48,16 @@ public class Zoo {
         }
         return result;
     }
+    public List<Swimable> getSwimers() {
+        List<Swimable> result = new ArrayList<Swimable>();
+        for (Animal an : animals) {
+            if (an instanceof Swimable) {
+                result.add((Swimable)an);
+            }
+
+        }
+        return result;
+    }
 
 
 public int getChampionOfRunners(){
@@ -60,6 +70,16 @@ public int getChampionOfRunners(){
     }
     return max_speed;
 
+}
+public int getChampionOfSwimers(){
+    int max_speed_swim = 0;
+    for (Swimable swimer : getSwimers()) {
+        if (max_speed_swim < swimer.speedOfSwim()){
+           max_speed_swim = swimer.speedOfSwim();
+
+        }
+    }
+    return max_speed_swim;
 }
 
     public ArrayList<Animal> getAnimals() {

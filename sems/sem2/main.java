@@ -5,7 +5,8 @@ public class main {
         Zoo zoo1 = new Zoo();
         zoo1.addAnimal(new Cat("Vasya", 1, "gray"))
                 .addAnimal(new Dog("Ignat", 10, "black"))
-                .addAnimal(new Duck("Donuld", 3, "White"));
+                .addAnimal(new Duck("Donuld", 3, "White"))
+                .addAnimal(new Turtle("Тартилла", 7, "green"));
         for (Animal an : zoo1.getAnimals()) {
             System.out.println(an);
             System.out.println(an.say());
@@ -16,18 +17,23 @@ public class main {
 
         for (Speakabll speak : zoo1.getSpeakables()) {
             System.out.println(speak.say());
-            
+
         }
         for (Runable runner : zoo1.getRunner()) {
-            System.out.println("Ranners speed is " +runner.speedOfRun());
+            System.out.println("Ranners speed is " + runner.speedOfRun());
         }
         int max_speed = zoo1.getChampionOfRunners();
-        System.out.println(String.format("Max of speed in the zoo, is %d",max_speed));
+        System.out.println(String.format("Max of speed in the zoo, is %d", max_speed));
 
         for (Flyable flyer : zoo1.getFlyers()) {
-            System.out.println("Flyers speed is " +flyer.speedOfFly());
+            System.out.println("Flyers speed is " + flyer.speedOfFly());
         }
-       
+        for (Swimable swimer : zoo1.getSwimers()) {
+            System.out.println("Swimers speed is " + swimer.speedOfSwim());
+        }
+        int max_speed_swim = zoo1.getChampionOfSwimers();
+        System.out.println(String.format("Max of speed of swim in the zoo, is %d", max_speed_swim));
+
     }
-    
+
 }
