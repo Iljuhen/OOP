@@ -7,6 +7,13 @@ import java.util.List;
 public class Personal implements Iterable<User> {
     private List<User> users = new ArrayList<>();
 
+    /**
+     * @return
+     */
+    public List<User> getUsers() {
+        return users;
+    }
+
     public void addUser(User user) {
         users.add(user);
     }

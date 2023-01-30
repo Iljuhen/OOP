@@ -1,6 +1,6 @@
 package sems.sem3;
 
-public class User {
+public class User implements Comparable<User> {
     private String name;
     private String surname;
     private int age;
@@ -32,6 +32,11 @@ public class User {
     public String toString() {
         
         return String.format("Name: %s, Surname: %s, age: %d", name, surname, age);
+    }
+    @Override
+    public int compareTo(User other) {
+        
+        return this.getAge()-other.getAge();
     }
     
 }
