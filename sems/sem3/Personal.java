@@ -18,25 +18,29 @@ public class Personal implements Iterable<User> {
         users.add(user);
     }
 
+    private class UserIterator implements Iterator<User> {
+        private int currentIndex = 0;
+
+        @Override
+        public boolean hasNext() {
+            return users.size() > currentIndex;
+
+        }
+
+        @Override
+        public User next() {
+
+            return users.get(currentIndex++);
+        }
+
+    }
+
     @Override
     public Iterator<User> iterator() {
 
-        return new Iterator<User>() {
-            private int currentIndex = 0;
-
-            @Override
-            public boolean hasNext() {
-                return users.size() > currentIndex;
-
-            }
-
-            @Override
-            public User next() {
-
-                return users.get(currentIndex++);
-            }
-
-        };
+        return new UserIterator();
+           
+            
     }
 
 }
