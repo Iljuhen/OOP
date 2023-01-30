@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Personal implements Iterable<User>{
+public class Personal implements Iterable<User> {
     private List<User> users = new ArrayList<>();
 
     public void addUser(User user) {
@@ -13,22 +13,23 @@ public class Personal implements Iterable<User>{
 
     @Override
     public Iterator<User> iterator() {
-        
+
         return new Iterator<User>() {
+            private int currentIndex = 0;
 
             @Override
             public boolean hasNext() {
-                // TODO Auto-generated method stub
-                return false;
+                return users.size() > currentIndex;
+
             }
 
             @Override
             public User next() {
-                // TODO Auto-generated method stub
-                return null;
+
+                return users.get(currentIndex++);
             }
-            
+
         };
-    }  
+    }
 
 }
