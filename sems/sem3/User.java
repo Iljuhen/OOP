@@ -4,6 +4,20 @@ public class User implements Comparable<User> {
     private String name;
     private String surname;
     private int age;
+    private Personal subordinate = new Personal();
+
+    public void addSubordination(Personal personal) {
+
+        
+        subordinate = personal;
+        
+    }
+    public void addOneUser(User user) {
+
+        
+        subordinate.addUser(user);
+        
+    }
 
     public User(String name, String surname, int age) {
         this.name = name;
@@ -37,8 +51,12 @@ public class User implements Comparable<User> {
 
     @Override
     public String toString() {
-
-        return String.format("Name: %s, Surname: %s, age: %d", name, surname, age);
+        String result = String.format("Name: %s, Surname: %s, age: %d\n", name, surname, age);
+        for (User user: subordinate) {
+            result = result+String.format("Boss: %s, %s", name, user.toString());
+            
+        }
+        return result;
     }
 
     @Override
