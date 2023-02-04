@@ -1,3 +1,4 @@
+package sems.java_oop_main.src;
 public class Main {
     public static void main(String[] args) {
        VendingMachine vendingMachine = new VendingMachine();

@@ -2,8 +2,6 @@ package sems.sem3;
 
 import java.util.Collections;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class sem3 {
     public static void main(String[] args) {
         User newUser = new User("Petya", "Petrov", 30);

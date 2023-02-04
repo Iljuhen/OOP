@@ -8,8 +8,7 @@ public class Main {
         InvestStatic obj2 = new InvestStatic(0);
         System.out.println("id 1 object = " + obj1.getId());
         System.out.println("id 2 object = " + obj2.getId());
-        InvestStatic a = null;
-        System.out.println(a.getId());
+
     }
 
 }

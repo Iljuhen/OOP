@@ -1,6 +1,6 @@
 package DZs.dz2;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Zoo zoo1 = new Zoo();
         zoo1.addAnimal(new Cat("Vasya", 1, "gray"))

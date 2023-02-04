@@ -1,12 +1,12 @@
 package sems.sem2;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         Zoo zoo1 = new Zoo();
         zoo1.addAnimal(new Cat("Vasya", 1, "gray"))
                 .addAnimal(new Dog("Ignat", 10, "black"))
                 .addAnimal(new Duck("Donuld", 3, "White"));
-                
+
         for (Animal an : zoo1.getAnimals()) {
             System.out.println(an);
             System.out.println(an.say());
@@ -28,6 +28,6 @@ public class main {
         for (Flyable flyer : zoo1.getFlyers()) {
             System.out.println("Flyers speed is " + flyer.speedOfFly());
         }
-       
+
     }
 }

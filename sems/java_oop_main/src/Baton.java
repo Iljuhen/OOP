@@ -1,7 +1,8 @@
-
+package sems.java_oop_main.src;
 
 public class Baton extends Product {
     private double calories;
+
     public Baton(String name, double cost, double calories) {
         super(name, cost);
         this.calories = calories;
@@ -9,7 +10,7 @@ public class Baton extends Product {
 
     @Override
     public String toString() {
-        return String.format(super.toString() + " calories: %f",this.calories);
+        return String.format(super.toString() + " calories: %f", this.calories);
     }
 
     public double getCalories() {
