@@ -1,3 +1,5 @@
+
+
 public class Baton extends Product {
     private double calories;
     public Baton(String name, double cost, double calories) {

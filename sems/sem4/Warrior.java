@@ -1,9 +1,11 @@
 package sems.sem4;
 
+import sems.sem4.Weapons.Weapon;
+
 public abstract class Warrior {
     private String name;
     private int healthPoint;
-    protected Weaponable weapon;
+    private Weapon weapon;
 
     public Warrior(String name, int healthPoint, Weaponable weapon) {
         this.name = name;
