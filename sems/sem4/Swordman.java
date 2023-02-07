@@ -4,14 +4,14 @@ import sems.sem4.Weapons.Sword;
 
 public class Swordman extends Warrior {
 
-    public Swordman(String name, int healthPoint, Weaponable weapon){
+    public Swordman(String name, int healthPoint, Sword sword) {
 
-        super(name, healthPoint, weapon);
+        super(name, healthPoint, sword);
     }
+
     @Override
     public String toString() {
-        
+
         return "Swordman, " + super.toString();
     }
 }
-    

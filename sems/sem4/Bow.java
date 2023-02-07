@@ -2,9 +2,10 @@ package sems.sem4;
 
 import java.util.Random;
 
+
 import sems.sem4.Weapons.Weapon;
 
-public class Bow extends Weapon{
+public class Bow extends Weapon {
     private int range;
 
     public Bow(int pointOfDamage, int range) {
@@ -14,18 +15,17 @@ public class Bow extends Weapon{
 
     @Override
     public String toString() {
-        return "Bow [range=" + range + "]"+ "Damage = " + pointOfDamage;
+        return "Bow [range=" + range + "]" + "Damage = " + pointOfDamage;
     }
 
-    public int getRange(){
+    public int getRange() {
         return range;
     }
 
-    
     @Override
     public int damage() {
-       
-        return new Random().nextInt(0, pointOfDamage);
+
+        return new Random().nextInt(pointOfDamage);
     }
-   
+
 }

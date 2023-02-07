@@ -7,7 +7,7 @@ public abstract class Warrior {
     private int healthPoint;
     private Weapon weapon;
 
-    public Warrior(String name, int healthPoint, Weaponable weapon) {
+    public Warrior(String name, int healthPoint, Weapon weapon) {
         this.name = name;
         this.healthPoint = healthPoint;
         this.weapon = weapon;
